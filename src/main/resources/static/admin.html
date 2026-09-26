@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Admin - Community Food Co-op</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>🌱 Community Food Co-op</h1>
+    <p class="tagline">Volunteer-run · Weekly pickup ordering</p>
+    <nav>
+        <a href="index.html">Order</a>
+        <a href="orders.html">My Orders</a>
+        <a href="admin.html" class="active">Volunteer Admin</a>
+    </nav>
+</header>
+
+<main>
+    <section class="card">
+        <h2>Pickup Weeks</h2>
+        <table id="week-table">
+            <thead>
+            <tr><th>ID</th><th>Week</th><th>Deadline</th><th>Status</th><th>Notes</th><th>Action</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <h3>Create new pickup week</h3>
+        <form id="week-form" class="inline-form">
+            <label>Start <input type="date" id="week-start" required></label>
+            <label>End <input type="date" id="week-end" required></label>
+            <label>Deadline <input type="date" id="week-deadline" required></label>
+            <label>Notes <input type="text" id="week-notes" placeholder="Pickup location / time"></label>
+            <button type="submit" class="primary">Create</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Products</h2>
+        <table id="product-table">
+            <thead>
+            <tr><th>ID</th><th>Name</th><th>Category</th><th>Unit</th><th>Price</th><th>Stock</th><th>Active</th><th>Action</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <h3>Add product</h3>
+        <form id="product-form" class="inline-form">
+            <label>Name <input type="text" id="product-name" required></label>
+            <label>Category
+                <select id="product-category">
+                    <option>VEGETABLES</option><option>FRUIT</option><option>DAIRY</option>
+                    <option>BAKERY</option><option>PANTRY</option><option>OTHER</option>
+                </select>
+            </label>
+            <label>Unit <input type="text" id="product-unit" placeholder="kg / box / loaf" required></label>
+            <label>Price <input type="number" id="product-price" step="0.01" min="0" required></label>
+            <label>Stock <input type="number" id="product-stock" min="0" required></label>
+            <button type="submit" class="primary">Add</button>
+        </form>
+    </section>
+
+    <section class="card">
+        <h2>Orders for open week</h2>
+        <label for="week-select">Pickup week</label>
+        <select id="week-select"></select>
+        <table id="order-table">
+            <thead>
+            <tr><th>ID</th><th>Member</th><th>Total</th><th>Status</th><th>Items</th><th>Action</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>ISYS3001 A2 - Community Food Co-operative Ordering System</p>
+</footer>
+
+<script src="js/admin.js"></script>
+</body>
+</html>

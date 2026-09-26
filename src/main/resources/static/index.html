@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Food Co-op - Weekly Pickup Ordering</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>🌱 Community Food Co-op</h1>
+    <p class="tagline">Volunteer-run · Weekly pickup ordering</p>
+    <nav>
+        <a href="index.html" class="active">Order</a>
+        <a href="orders.html">My Orders</a>
+        <a href="admin.html">Volunteer Admin</a>
+    </nav>
+</header>
+
+<main>
+    <section id="week-banner" class="banner">
+        Loading pickup week...
+    </section>
+
+    <section class="order-panel">
+        <div class="order-panel-left">
+            <h2>This Week's Products</h2>
+            <div id="product-list" class="product-grid">Loading...</div>
+        </div>
+
+        <aside class="cart">
+            <h2>My Basket</h2>
+            <label for="member-select">Ordering as</label>
+            <select id="member-select"></select>
+            <ul id="cart-items"></ul>
+            <p class="cart-total">Total: $<span id="cart-total">0.00</span></p>
+            <button id="place-order" class="primary">Place Order</button>
+            <p id="cart-message" class="message"></p>
+        </aside>
+    </section>
+</main>
+
+<footer>
+    <p>ISYS3001 A2 - Community Food Co-operative Ordering System</p>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
