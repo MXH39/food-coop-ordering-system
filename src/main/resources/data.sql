@@ -2,6 +2,7 @@
 -- Seed data. Idempotent: rows are only inserted when missing.
 -- =============================================================
 
+
 -- Members and volunteers (volunteer account used by the admin page)
 INSERT INTO users (id, full_name, email, phone, role)
 SELECT 1, 'Alice Volunteer', 'alice@foodcoop.org', '0400 000 001', 'VOLUNTEER_ADMIN' FROM DUAL
