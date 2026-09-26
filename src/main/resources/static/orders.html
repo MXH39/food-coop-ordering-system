@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Orders - Community Food Co-op</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+    <h1>🌱 Community Food Co-op</h1>
+    <p class="tagline">Volunteer-run · Weekly pickup ordering</p>
+    <nav>
+        <a href="index.html">Order</a>
+        <a href="orders.html" class="active">My Orders</a>
+        <a href="admin.html">Volunteer Admin</a>
+    </nav>
+</header>
+
+<main>
+    <section class="order-panel">
+        <div class="order-panel-left">
+            <h2>My Orders</h2>
+            <label for="member-select">Show orders for</label>
+            <select id="member-select"></select>
+            <div id="orders-list">Loading...</div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>ISYS3001 A2 - Community Food Co-operative Ordering System</p>
+</footer>
+
+<script src="js/orders.js"></script>
+</body>
+</html>
